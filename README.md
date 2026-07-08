@@ -2,23 +2,26 @@
 
 ## Overview
 
-This project is a Python-based client-server communication system designed to demonstrate secure communication over a Local Area Network (LAN). The application uses TCP sockets on port 5000 to establish a connection between a client and a server. To ensure data confidentiality, all messages are encrypted using the Advanced Encryption Standard (AES) before transmission and decrypted upon receipt. The project was developed and tested on Kali Linux and provides a practical understanding of networking, socket programming, and cryptography.
+AES-Based Secure Socket Communication is a Python-based networking project that demonstrates secure communication between a client and a server over a Local Area Network (LAN). The application uses TCP sockets on port **5000** to establish a connection, while the **Fernet** implementation from the `cryptography` library is used to encrypt and decrypt messages.
+
+The project was developed and tested on **Kali Linux** as part of a cybersecurity and networking learning exercise. It demonstrates the practical implementation of socket programming, client-server architecture, TCP/IP communication, and symmetric encryption to protect data transmitted across the network.
 
 ## Features
 
-- Client-server communication using TCP sockets
-- Secure message transmission with AES encryption
+- TCP client-server communication
+- Secure message encryption using Fernet (AES-based)
+- Message decryption at the server
 - Communication over port 5000
-- Real-time data exchange within a Local Area Network
-- Developed and tested on Kali Linux
-- Simple and modular Python implementation
+- Local Area Network (LAN) communication
+- Simple command-line interface
+- Built using Python
 
 ## Technologies Used
 
 - Python 3
 - Socket Programming
 - TCP/IP Protocol
-- AES Encryption
+- Cryptography (Fernet)
 - Kali Linux
 
 ## Project Structure
@@ -27,71 +30,86 @@ This project is a Python-based client-server communication system designed to de
 AES-Based-Secure-Socket-Communication/
 │── client.py
 │── server.py
+│── requirements.txt
+│── .gitignore
 │── README.md
+└── screenshots/
 ```
 
-## Installation
+## Requirements
 
-1. Clone the repository.
+Install the required package before running the project:
 
 ```bash
-git clone https://github.com/your-username/AES-Based-Secure-Socket-Communication.git
+pip install -r requirements.txt
 ```
 
-2. Navigate to the project directory.
+or
 
 ```bash
-cd AES-Based-Secure-Socket-Communication
+pip install cryptography
 ```
 
-3. Install the required dependencies.
+## How to Run
 
-```bash
-pip install pycryptodome
-```
-
-## Usage
-
-Start the server:
+### Start the Server
 
 ```bash
 python3 server.py
 ```
 
-The server listens for incoming connections on port **5000**.
+The server starts listening for incoming TCP connections on **port 5000**.
 
-In another terminal or on another device connected to the same network, start the client:
+### Start the Client
 
 ```bash
 python3 client.py
 ```
 
-Enter the server's IP address if required and begin exchanging encrypted messages.
+Enter the server's IP address when prompted. Ensure both devices are connected to the same Local Area Network (LAN).
 
 ## Working
 
-The server waits for incoming TCP connections on port 5000. Once a client connects, messages are encrypted using AES before being transmitted across the network. The receiving end decrypts the messages using the same encryption key, allowing secure communication between the client and server.
+1. The server starts and listens on port **5000**.
+2. The client connects to the server using its IP address.
+3. The client encrypts the message using **Fernet** encryption before sending it.
+4. The server receives the encrypted data.
+5. The server decrypts the message and displays the original plaintext.
+
+This process demonstrates secure communication using symmetric encryption over a TCP connection.
+
+## Screenshots
+
+You can add screenshots of:
+
+- Server waiting for client connection
+- Client successfully connected
+- Encrypted message transmission
+- Decrypted message displayed on the server
 
 ## Learning Outcomes
 
-This project helped strengthen my understanding of:
+Through this project, I gained practical experience with:
 
-- Socket Programming
-- TCP/IP Networking
-- Client-Server Architecture
-- AES Encryption
-- Secure Network Communication
-- Python Application Development
+- Python socket programming
+- TCP/IP networking
+- Client-server architecture
+- Symmetric encryption using Fernet
+- Secure data transmission
+- Network communication on Linux
 
 ## Future Enhancements
 
 - Multi-client support
-- Secure key exchange mechanism
-- Graphical user interface
-- File transfer functionality
-- SSL/TLS implementation
+- Secure key management using environment variables
 - User authentication
+- File transfer over encrypted channels
+- Graphical User Interface (GUI)
+- Logging and monitoring
+- SSL/TLS implementation
 
 ## Author
 
 **Vidya Tayade**
+
+First-Year B.Tech (Information Technology)
