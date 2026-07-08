@@ -79,13 +79,10 @@ Enter the server's IP address when prompted. Ensure both devices are connected t
 This process demonstrates secure communication using symmetric encryption over a TCP connection.
 
 ## Screenshots
+<img width="1600" height="900" alt="WhatsApp Image 2026-07-09 at 1 37 42 AM" src="https://github.com/user-attachments/assets/20bc3bec-ce16-4ea4-8475-ba285e6cad83" />
+<img width="1599" height="838" alt="WhatsApp Image 2026-07-09 at 1 37 41 AM" src="https://github.com/user-attachments/assets/780a9de6-63a8-4e78-a3a4-23869e44e50b" />
 
-You can add screenshots of:
 
-- Server waiting for client connection
-- Client successfully connected
-- Encrypted message transmission
-- Decrypted message displayed on the server
 
 ## Learning Outcomes
 
